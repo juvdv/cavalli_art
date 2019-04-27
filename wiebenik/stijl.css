@@ -1,0 +1,256 @@
+.slider {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  left: 0rem;
+  top: 0rem;
+  margin: auto;
+  z-index: -99;
+}
+
+.slider li {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  z-index: -100;
+  opacity: 0;
+  transition: all .5s ease-in-out;
+}
+
+.slider li:first-child {
+  background-image: url(JUD_4297-2.jpg);
+  opacity: 1;
+}
+
+.slider li:nth-child(2) {
+  background-image: url(5.jpg);
+}
+
+.slider li:last-child {
+  background-image: url(6.jpg);
+}
+
+.photo {
+  background-image: url(19-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -98;
+}
+
+main {
+  height: cover;
+  width: 100%;
+}
+
+nav {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 5rem;
+  z-index: 1;
+  transition: all .3s ease-in-out;
+}
+
+nav.onzichtbaar {
+  right: -100vw;
+}
+
+nav a {
+  display: block;
+  text-decoration: none;
+  font-size: 2.25rem;
+  font-family: Nunito;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+  z-index: 200;
+}
+
+.icon {
+  position: absolute;
+  top: 7%;
+  right: -5%;
+  transform: translate(-50%, -50%);
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.hamburger {
+  width: 30px;
+  height: 4px;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: .5s;
+}
+
+.hamburger:before,
+.hamburger:after {
+  content: '';
+  position: absolute;
+  width: 30px;
+  height: 4px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: .5s;
+}
+
+.hamburger:before {
+  top: -10px;
+}
+
+.hamburger:after {
+  top: 10px;
+}
+
+.icon.active .hamburger {
+  background: rgba(0, 0, 0, 0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0);
+}
+
+.icon.active .hamburger:before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.icon.active .hamburger:after {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+main {
+  height: 55rem;
+}
+
+footer {
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+footer a {
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  font-family: Nunito;
+  text-decoration: none;
+  border-radius: 5rem;
+}
+
+.logo {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  width: 10rem;
+  z-index: 0;
+}
+
+.midden {
+  height: 30rem;
+  width: 100%;
+  margin: auto;
+  padding: 2rem;
+  position: absolute;
+  top: 25%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  z-index: -97;
+  grid-gap: 2rem;
+  font-family: Nunito;
+}
+
+.midden div:nth-child(1) {
+  background-image: url(juju.jpg);
+  background-position: center;
+  background-size: cover;
+  grid-column: 3;
+}
+
+.midden h3 {
+  grid-column: 1;
+  grid-row: 1;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.midden p {
+  grid-column: 1/3;
+  grid-row: 1;
+  font-size: 1rem;
+  margin-top: 3rem;
+  line-height: 1.7rem;
+}
+
+
+@supports (grid-area: auto) {
+
+  /* we weten hier: ondersteuning voor grid-layout */
+  @media (min-width: 870px) {
+    .photo {
+      display: none;
+    }
+
+    .icon {
+      top: 7%;
+      right: 0%;
+    }
+
+    .logo {
+      width: 15rem;
+    }
+
+    nav {
+      width: 30vw;
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      padding: 5rem;
+      z-index: 0;
+    }
+
+    nav.onzichtbaar {
+      right: -30vw;
+    }
+
+    .midden {
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+      height: 35rem;
+    }
+
+    .midden div:nth-child(1) {
+      background-image: url(JUD_4232.jpg);
+      background-position: center;
+      background-size: cover;
+      grid-column: 1/4;
+    }
+
+    .midden h3 {
+      grid-column: 4;
+      grid-row: 1;
+    }
+
+    .midden p {
+      grid-column: 4/7;
+      grid-row: 1;
+      margin-top: 4rem;
+      line-height: 1.8rem;
+      font-size: 1.5rem;
+    }
+  }
+}

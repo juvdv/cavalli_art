@@ -1,0 +1,31 @@
+nav {
+  background-color: black;
+}
+
+nav a {
+  color: white;
+}
+
+footer a {
+  color: white;
+  border: solid black 0.2rem;
+  background-color: black;
+}
+
+footer a:hover {
+  border: solid white 0.2rem;
+}
+.teruggaan{
+  color: black;
+  border: solid white 0.2rem;
+  background-color: white;
+}
+.teruggaan:hover{
+  border: solid black 0.2rem;
+}
+body{
+  background-color: black;
+}
+main div{
+  color: white;
+}

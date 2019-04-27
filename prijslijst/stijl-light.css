@@ -1,0 +1,21 @@
+.hamburger{
+	background: black;
+}
+.hamburger:before,
+.hamburger:after{
+	background: black;
+}
+nav {
+	background-color: white;
+}
+nav a{
+	color: black;
+}
+footer a{
+color: black;
+border: solid white 0.2rem;
+background-color: white;
+}
+footer a:hover{
+	border: solid black 0.2rem;
+}

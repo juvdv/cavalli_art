@@ -1,0 +1,22 @@
+nav {
+  background-color: black;
+}
+
+nav a {
+  color: white;
+}
+
+footer a {
+  color: white;
+  border: solid black 0.2rem;
+  border-radius: 5rem;
+  background-color: black;
+}
+
+footer a:hover {
+  border: solid white 0.2rem;
+}
+.midden{
+  background-color: black;
+  color: white;
+}
