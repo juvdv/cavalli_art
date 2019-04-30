@@ -131,7 +131,7 @@ nav a {
 }
 
 main {
-  height: 55rem;
+  height: 65rem;
 }
 
 footer {
@@ -145,7 +145,7 @@ footer {
 
 footer a {
   padding: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-family: Nunito;
   text-decoration: none;
   border-radius: 5rem;
